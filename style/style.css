@@ -1,0 +1,47 @@
+/* Configurações iniciais */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+/* Fundo da pagina */
+
+body {
+    background-image: url('/img/fundo.jpg');
+    background-size: cover; /* Quando a tela estiver pequena a img vai se multiplicar. */
+    width: 100vw; /* 100 % da largura, para a img parar de se multiplicar */
+    height: 100vh; /* 100 % da altura, para a img parar de se multiplicar */
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/* Parte superior da pagina */
+
+.title {
+    color:#ffcc00;
+    margin: 20vh auto; /* Centralizando o titulo no local que quero */
+    font-size: calc(5vw + 20px); /* 20 VW + o minimo que quero da letra */
+    text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black; /* Colocando uma Sombra mais forte */
+}
+
+/* Meio da Pagina */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background-color: white;
+    width: 90vw;
+    height:100px;
+    margin:0 auto; /* Para que as teclas fiquem no centro */
+
+}
+
+
+
+
