@@ -26,12 +26,10 @@ const criarDiv = (texto) => {
 
 }
 
-// função para exibir sons
-
 const exibir = (sons) => {
 
     Object.keys(sons).forEach(criarDiv); // cada elemento que o forEach pegar ele vai mandar para a função "criarDiv" e a função criar div vai pegar um texto e criar uma div.
-    
+
 }
 
 exibir(sons);
