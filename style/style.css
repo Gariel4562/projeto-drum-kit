@@ -35,10 +35,30 @@ main {
 }
 
 .container {
-    background-color: white;
     width: 90vw;
     height:100px;
     margin:0 auto; /* Para que as teclas fiquem no centro */
+    display: flex;
+    flex-wrap: wrap; /* ele vai quebrar quando eu começar a diminuir o tamanho da tela */
+    align-items: center;
+    justify-content: space-around;
+    gap:15px; /* espaço que ele dará entre os blocos. */
+
+}
+
+.key {
+    display: flex;
+    width:100px;
+    height:100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000bb;
+    color:white;
+    font-size: calc(3vw + 20px);
+    border: 3px solid white;
+    user-select: none;
+    cursor: pointer;
+
 
 }
 
