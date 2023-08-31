@@ -40,12 +40,26 @@ const tocarSom = (letra) => {
 
 }
 
+// Adiciona efeito
+const adicionarEfeito = (letra) => document.getElementById(letra)
+                                           .classList.add('active');
+
+// Remove efeito
+
+const removerEfeito = (letra) => {
+    const div = document.getElementById(letra);
+    const removeActive = () => div.classList.remove('active');
+    div.addEventListener('transitionend', removeActive );
+}
+
+
 const ativarDiv = (event) => {
     const letra = event.target.id;
     const letraPermitida = sons.hasOwnProperty(letra) // se falso, se não clicar em um container não vai tocar a musica, se verdadeiro tocará.
     if(letraPermitida) {
-
+        adicionarEfeito(letra); // vai adicionar o efeito
         tocarSom(letra); // tocará o som da letra que eu clicar.
+        removerEfeito(letra); // vai remover o efeito
 
     }
 
