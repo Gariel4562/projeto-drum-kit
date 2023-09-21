@@ -54,7 +54,17 @@ const removerEfeito = (letra) => {
 
 
 const ativarDiv = (event) => {
-    const letra = event.target.id;
+
+    let letra = "";
+
+    if(event.type == 'click') {
+        letra = event.target.id;
+
+    } else {
+        letra = event.key.toUpperCase()
+
+    }
+
     const letraPermitida = sons.hasOwnProperty(letra) // se falso, se não clicar em um container não vai tocar a musica, se verdadeiro tocará.
     if(letraPermitida) {
         adicionarEfeito(letra); // vai adicionar o efeito
@@ -72,3 +82,5 @@ const ativarDiv = (event) => {
 exibir(sons); 
 
 document.getElementById(`container`).addEventListener(`click`, ativarDiv); // Ao clicar no botão vai ativar a div.
+
+window.addEventListener('keydown', ativarDiv)
